@@ -1,0 +1,14 @@
+limitation
+1. preferential transport
+2. SOC influce on soil erosion/deposition
+3. temperature inlufce on SOC transformation
+4. no soil weathering from the bottom layer
+
+R1:
+There exists a preferential transport of SOC in that the mobilization and deposition of SOC is affected by the different size fractions of aggregates, which is determined by sand, silt, clay, and SOC content [Foster et al. 1995; Papanicolaou et al. 2015]. Based on in-situ experiment conducted in the Clear Creek Watershed [Papanicolaou et al. 2015], the enrichment ratio, k_soc, is between 1 to 3, based on different locations and rainfall events. However, in a monthly time scale, k_soc is very close to 1. In our model, we simulate a 100-yr time scale, hence we assume k_soc=1. However, the complex of the model can be built up by giving spatially and temporally various k_soc as needed. 
+
+R3:
+In this model, we do not consider the directly influence of the losses or gains in SOC on soil erosion/deposition because we want to keep the model in a reasonably simple form. Different SOC content would result in different size of soil aggregates and maybe different vegetation cover. Hence, would cause different erodibility coefficients in space. This detailed level can be further added based on the current model framework as needed. Besides this limitation, other limitation such as no soil temperature in the biogeochemical model is also added in the revised version. Limitations of the model are address accordingly in each subsection of Section 2. 
+Section 2.2, 2.4
+
+

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20181009</CreaDate><CreaTime>14134900</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Conversion Tools.tbx\PolygonToRaster" Date="20181009" Time="141349">PolygonToRaster mask_grass_waterway Id D:\Users\Qina\C-N_model_multi_Layer\CCW_DEM_2m\mask_grass_waterway4.tif CELL_CENTER Id 2</Process></lineage></DataProperties></Esri></metadata>

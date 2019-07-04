@@ -1,0 +1,53 @@
+log
+
+legend_Model_3.0 has several major revisons from previous version
+
+'Legend_Model_3.0/Soil_Moisture_pool/F_Soil_Moisture.py'
+1.  change the rainfall input. the rainfall data is updated from Dongkook. Previous he gave me the rainfall data from 15 km far away from my study site... now it is much closer (~5km?), but I do not know where it is...
+
+
+‘Legend_Model_3.0/SOM Dynamics_pool/CN_biogeochemical.py’
+2. litter input becomes a time series value. Corn-soybean-corn-soybean-...
+
+3. Turn off the N cycle.
+
+4. Change the parameters on Landscape evolution model
+
+5. Use different manning’s coefficients for with landcover and no landcover. 
+
+
+‘/Users/qina/Dropbox/Phong-Qina Share/Legend_Model_3.0/main_parappel.py’
+6. switch button for sine wave model or CCW model
+
+7. Add detachment-limited part
+
+8. switch button for LEM model: detachment-limited or transport-limited, or both?
+
+9. Add beginning and ending date of LAI (vegetation cover period)
+
+10.two Manning’s coefficients for vegetation cover and bare soil
+
+11. Save the results at the end of each month. 12 files each year, and total is 1200 files. 
+
+
+/Users/qina/Dropbox/SCALE_1.0_CCW
+
+12.get the delta Cl_all, Ch_all, and Cb_all from BG
+Change 
+   Cl_all,Ch_all,Cb_all \
+             = multi_layer_CN(Cl_all,Ch_all,Cb_all,theta_n_all/poros,z_matrix,dz_matrix,Kl,Kh,Kd,litter_above,litter_below,nrows,ncols)
+
+to 
+        dCl_all,dCh_all,dCb_all \
+             = multi_layer_CN(Cl_all,Ch_all,Cb_all,theta_n_all/poros,z_matrix,dz_matrix,Kl,Kh,Kd,litter_above,litter_below,nrows,ncols)
+
+13. B.C. of Landscape diffusion Cl, Cr, Cu, Cd are changed to Bl, Br, Bu, Bd to avoid conflict with Cl, Ch, Cb. 
+
+14. Recalculate SOC diffusion transport, rebuilt matrix  and B.C.
+matrix_Ad, matrix_BC,\
+matrix_Adxp1, matrix_Adxm1, matrix_Adyp1, matrix_Adym1,\
+BCx_p1, BCx_m1, BCy_p1,BCy_m1 = linear_diffusion(nrows,ncols,level)
+
+15. update the B.C. for both soil diffusion and SOC diffusion transport
+
+16. Add a mask to reduce the soil diffusion and transport-limited processes in the grass boarders — the two straight lines in DEM. 
